@@ -1,0 +1,23 @@
+body {
+    height: 100%;
+    background-image: linear-gradient(to bottom, cornflowerblue, blue, cornflowerblue);
+    color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Bangers', cursive;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 24px;
+}
+
+th {
+    text-align: left;
+}

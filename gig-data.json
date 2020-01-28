@@ -1,0 +1,33 @@
+[
+    {
+        "date": "01-17-2020",
+        "venue": "Carco Theatre",
+        "city": "Renton",
+        "state": "WA",
+        "bandCode": "CF"
+    },
+    {
+        "date": "01-18-2020",
+        "venue": "Red Wind Casino",
+        "city": "Olympia",
+        "state": "WA",
+        "bandCode": "TM",
+        "pay": 300
+    },
+    {
+        "date": "01-20-2020",
+        "venue": "Edmonds Center for the Arts",
+        "city": "Edmonds",
+        "state": "WA",
+        "bandCode": "CF",
+        "pay": 250
+    },
+    {
+        "date": "02-01-2020",
+        "venue": "Historic Everett Theatre",
+        "city": "Everett",
+        "state": "WA",
+        "bandCode": "DJ",
+        "pay": 250
+    }
+]
