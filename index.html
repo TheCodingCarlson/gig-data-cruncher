@@ -4,45 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gigs I Played In 2020</title>
+    <title>Gig Data Cruncher</title>
     <link href="https://fonts.googleapis.com/css?family=Bangers|Roboto&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/tabs.css">
 </head>
 <body>
-    <h2>Gig Breakdown</h2>
-
-    <table>
-        <thead>
-            <th>Date</th>
-            <th>Venue</th>
-            <th>City</th>
-            <th>State</th>
-            <th>Band</th>
-            <th>Pay</th>
-        </thead>
-        <tbody class="gig-table-body"></tbody>
-    </table>
-
-    <h2>Band Breakdown</h2>
-
-    <table>
-        <thead>
-            <th>Band</th>
-            <th># of Gigs</th>
-        </thead>
-        <tbody class="band-table-body"></tbody>
-    </table>
-
-    <h2>Data Breadown</h2>
-
-    <table>
-        <thead>
-            <th>Data Point</th>
-            <th>Value</th>
-        </thead>
-        <tbody class="data-table-body"></tbody>
-    </table>
+    <div class="wrapper">
+        <h1>Gig Data Cruncher</h1>
+        <div class="tabs">
+            <div role="tablist" aria-label="data sets">
+                <button role="tab" aria-selected="true" id="gig-breakdown">
+                    Gig Breakdown
+                </button>
+                <button role="tab" aria-selected="false" id="band-breakdown">
+                    Band Breakdown
+                </button>
+                <button role="tab" aria-selected="false" id="data-breakdown">
+                    Data Breakdown
+                </button>
+            </div>
+            <div role="tabpanel" aria-labelledby="gig-breakdown">
+                <table>
+                    <thead>
+                        <th>Date</th>
+                        <th>Venue</th>
+                        <th>City</th>
+                        <th>State</th>
+                        <th>Band</th>
+                        <th>Pay</th>
+                    </thead>
+                    <tbody class="gig-table-body"></tbody>
+                </table>
+            </div>
+            <div role="tabpanel" aria-labelledby="band-breakdown" hidden>
+                <table>
+                    <thead>
+                        <th>Band</th>
+                        <th># of Gigs</th>
+                    </thead>
+                    <tbody class="band-table-body"></tbody>
+                </table>
+            </div>
+            <div role="tabpanel" aria-labelledby="data-breakdown" hidden>
+                <table>
+                    <thead>
+                        <th>Data Point</th>
+                        <th>Value</th>
+                    </thead>
+                    <tbody class="data-table-body"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
     <script type="text/javascript" src="js/gigs.js"></script>
+    <script type="text/javascript" src="js/tabs.js"></script>
 </body>
 </html>
