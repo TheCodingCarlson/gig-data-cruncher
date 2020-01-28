@@ -7,8 +7,8 @@ const dataTableBody = document.querySelector('.data-table-body');
 try {
     (async() => {
         let [ gigData, bandData ] = await Promise.all([
-            fetch('./gigs-2019.json').then(value => value.json()),
-            fetch('./band-data.json').then(value => value.json())
+            fetch('./json/gig-data/2019.json').then(value => value.json()),
+            fetch('./json/band-data.json').then(value => value.json())
         ]);
 
         const bands = [ ...new Set(gigData.map(gig => gig.bandCode)) ];
