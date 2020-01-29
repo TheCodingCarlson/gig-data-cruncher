@@ -3,13 +3,15 @@
 /* Variables */
 html {
     --grey: #e7e7e7;
-    --blue: #0000ff;
-    --black: #2e2e2e;
-    --text-shadow: 2px 2px 0 rgba(0,0,0,0.2);
+    --blue: #2d545e;
+    --dark-blue: #12343b;
+    --tan: #e1b382;
+    --dark-tan :#c89666;
     --box-shadow: 0 0 5px 5px rgba(0,0,0,0.2);
     font-size: 62.5%;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Oswald', sans-serif;
     box-sizing: border-box;
+    letter-spacing: 2px;
 }
 
 *, *:before, *:after {
@@ -19,7 +21,7 @@ html {
 body {
     font-size: 2rem;
     line-height: 1.5;
-    background-image: linear-gradient(to bottom, cornflowerblue, blue, cornflowerblue);
+    background-color: var(--dark-blue);
     background-size: 15px;
     color: whitesmoke;
 }
@@ -27,15 +29,12 @@ body {
 /* Table Styles */
 
 table {
-    border-radius: 5px;
-    overflow: hidden;
-    margin-bottom: 2rem;
     border-collapse: collapse;
 }
   
 td, th {
-    border: 1px solid var(--grey);
-    padding: 0.5rem;
+    border: 2px solid var(--dark-tan);
+    padding: 1rem;
 }
 
 /* Helper Divs */
@@ -44,7 +43,7 @@ td, th {
     max-width: 1000px;
     margin: 4rem auto;
     padding: 2rem;
-    background: white;
+    background: var(--dark-tan);
 }
   
 .box, .wrapper {
@@ -57,19 +56,9 @@ h3,
 h4,
 h5,
 h6 {
-    color: white;
+    color: var(--grey);
     margin-top: 0;
     line-height: 1;
-    text-shadow: var(--text-shadow);
-    font-family: 'Bangers', cursive;
-}
-
-.wrapper h1,
-.wrapper h2,
-.wrapper h3,
-.wrapper h4,
-.wrapper h5,
-.wrapper h6 {
-    color: var(--black);
-    text-shadow: none;
+    font-family: 'Sigmar One', cursive;
+    -webkit-text-stroke: 1px var(--dark-blue);
 }

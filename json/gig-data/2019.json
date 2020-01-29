@@ -1,14 +1,14 @@
 [
     {
         "date": "01-07-2019",
-        "venue": "",
+        "venue": "Wedding",
         "city": "Blaine",
         "state": "WA",
         "bandCode": "TS",
         "pay": 250
     },
     {
-        "date": "01-19-2020",
+        "date": "01-19-2019",
         "venue": "The Mill",
         "city": "Milton",
         "state": "WA",
@@ -40,12 +40,12 @@
         "pay": 200
     },
     {
-        "date": "02-23-2019",
-        "venue": "The Anchor",
-        "city": "Everett",
+        "date": "02-26-2019",
+        "venue": "SPU",
+        "city": "Seattle",
         "state": "WA",
-        "bandCode": "LT",
-        "pay": 100
+        "bandCode": "SN",
+        "pay": 50
     },
     {
         "date": "03-09-2019",
@@ -121,7 +121,7 @@
     },
     {
         "date": "04-27-2019",
-        "venue": "The Quilceda Casino",
+        "venue": "The Quilceda Creek Casino",
         "city": "Marysville",
         "state": "WA",
         "bandCode": "DJ",
@@ -142,5 +142,312 @@
         "state": "WA",
         "bandCode": "EA",
         "pay": 230
+    },
+    {
+        "date": "05-18-2019",
+        "venue": "NA",
+        "city": "Puyallup",
+        "state": "WA",
+        "bandCode": "SM",
+        "pay": 200
+    },
+    {
+        "date": "06-13-2019",
+        "venue": "Summer Concert Series",
+        "city": "Yakima",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 250
+    },
+    {
+        "date": "06-14-2019",
+        "venue": "Engles Pub",
+        "city": "Edmonds",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 115
+    },
+    {
+        "date": "06-22-2019",
+        "venue": "Summer Concert Series",
+        "city": "Richland",
+        "state": "WA",
+        "bandCode": "EA",
+        "pay": 115
+    },
+    {
+        "date": "06-28-2019",
+        "venue": "Silver Ridge Ranch",
+        "city": "Easton",
+        "state": "WA",
+        "bandCode": "DJ",
+        "pay": 225
+    },
+    {
+        "date": "07-04-2019",
+        "venue": "Tolt River-John MacDonald Park",
+        "city": "Carnation",
+        "state": "WA",
+        "bandCode": "SM",
+        "pay": 200
+    },
+    {
+        "date": "07-06-2019",
+        "venue": "The Anchor",
+        "city": "Everett",
+        "state": "WA",
+        "bandCode": "RT"
+    },
+    {
+        "date": "07-07-2019",
+        "venue": "Jazzbones",
+        "city": "Tacoma",
+        "state": "WA",
+        "bandCode": "RT"
+    },
+    {
+        "date": "07-11-2019",
+        "venue": "Lake Burien School Memorial Park",
+        "city": "Burien",
+        "state": "WA",
+        "bandCode": "DJ",
+        "pay": 200
+    },
+    {
+        "date": "07-12-2019",
+        "venue": "Nuemos",
+        "city": "Seattle",
+        "state": "WA",
+        "bandCode": "JR",
+        "pay": 100
+    },
+    {
+        "date": "07-13-2019",
+        "venue": "Wedding",
+        "city": "Snohomish",
+        "state": "WA",
+        "bandCode": "EA",
+        "pay": 225
+    },
+    {
+        "date": "07-15-2019",
+        "venue": "NA",
+        "city": "Bellevue",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 275
+    },
+    {
+        "date": "07-20-2019",
+        "venue": "Wedding",
+        "city": "Spokane",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 300
+    },
+    {
+        "date": "07-25-2019",
+        "venue": "Pono Ranch",
+        "city": "Seattle",
+        "state": "WA",
+        "bandCode": "EA",
+        "pay": 200
+    },
+    {
+        "date": "08-02-2019",
+        "venue": "Residence",
+        "city": "Seattle",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 300
+    },
+    {
+        "date": "08-07-2019",
+        "venue": "Summer Concert Series",
+        "city": "Coeur d'Alene",
+        "state": "ID",
+        "bandCode": "EA",
+        "pay": 250
+    },
+    {
+        "date": "08-09-2019",
+        "venue": "One Shot Charlies",
+        "city": "Harrison",
+        "state": "ID",
+        "bandCode": "EA",
+        "pay": 250
+    },
+    {
+        "date": "08-10-2019",
+        "venue": "One Shot Charlies",
+        "city": "Harrison",
+        "state": "ID",
+        "bandCode": "EA",
+        "pay": 290
+    },
+    {
+        "date": "08-15-2019",
+        "venue": "Substation Seattle",
+        "city": "Seattle",
+        "state": "WA",
+        "bandCode": "KZ",
+        "pay": 225
+    },
+    {
+        "date": "08-16-2019",
+        "venue": "Summer Concert Series",
+        "city": "Bonney Lake",
+        "state": "WA",
+        "bandCode": "SM",
+        "pay": 225
+    },
+    {
+        "date": "08-17-2019",
+        "venue": "Navy Base",
+        "city": "Silverdale",
+        "state": "WA",
+        "bandCode": "SM",
+        "pay": 200
+    },
+    {
+        "date": "09-01-2019",
+        "venue": "Residence",
+        "city": "Bellevue",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 350
+    },
+    {
+        "date": "09-06-2019",
+        "venue": "Residence",
+        "city": "Yakima",
+        "state": "WA",
+        "bandCode": "CF"
+    },
+    {
+        "date": "09-07-2019",
+        "venue": "MacDonald's Resort",
+        "city": "Bayview",
+        "state": "WA",
+        "bandCode": "EA",
+        "pay": 400
+    },
+    {
+        "date": "09-21-2019",
+        "venue": "Wedding",
+        "city": "Couer d'Alene",
+        "state": "ID",
+        "bandCode": "EA",
+        "pay": 300
+    },
+    {
+        "date": "09-28-2019",
+        "venue": "Sheraton Grand Seattle",
+        "city": "Seattle",
+        "state": "WA",
+        "bandCode": "JA",
+        "pay": 300
+    },
+    {
+        "date": "10-03-2019",
+        "venue": "Everett Community College",
+        "city": "Everett",
+        "state": "WA",
+        "bandCode": "BGP",
+        "pay": 300
+    },
+    {
+        "date": "10-04-2019",
+        "venue": "The Brick",
+        "city": "Roslyn",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 200
+    },
+    {
+        "date": "10-18-2019",
+        "venue": "Corporate Party",
+        "city": "Seattle",
+        "state": "WA",
+        "bandCode": "HE",
+        "pay": 275
+    },
+    {
+        "date": "10-19-2019",
+        "venue": "Wedding",
+        "city": "Issaquah",
+        "state": "WA",
+        "bandCode": "DJ",
+        "pay": 225
+    },
+    {
+        "date": "10-26-2019",
+        "venue": "Cedar Park Church",
+        "city": "Bothell",
+        "state": "WA",
+        "bandCode": "CF",
+        "pay": 200
+    },
+    {
+        "date": "11-09-2019",
+        "venue": "The Quilceda Creek Casino",
+        "city": "Marysville",
+        "state": "WA",
+        "bandCode": "DJ",
+        "pay": 225
+    },
+    {
+        "date": "11-12-2019",
+        "venue": "Hilton Seattle",
+        "city": "Seattle",
+        "state": "WA",
+        "bandCode": "JA",
+        "pay": 350
+    },
+    {
+        "date": "11-16-2019",
+        "venue": "The Slippery Pig Brewery",
+        "city": "Poulsbo",
+        "state": "WA",
+        "bandCode": "JR"
+    },
+    {
+        "date": "12-06-2019",
+        "venue": "Corporate Party",
+        "city": "Seattle",
+        "state": "WA",
+        "bandCode": "BGP",
+        "pay": 250
+    },
+    {
+        "date": "12-07-2019",
+        "venue": "Corporate Party",
+        "city": "Bellevue",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 350
+    },
+    {
+        "date": "12-15-2019",
+        "venue": "Hillside Church",
+        "city": "Kent",
+        "state": "WA",
+        "bandCode": "CF",
+        "pay": 100
+    },
+    {
+        "date": "12-20-2019",
+        "venue": "The Bravern",
+        "city": "Bellevue",
+        "state": "WA",
+        "bandCode": "CF",
+        "pay": 100
+    },
+    {
+        "date": "12-28-2019",
+        "venue": "The Quilceda Creek Casino",
+        "city": "Marysville",
+        "state": "WA",
+        "bandCode": "DJ"
     }
 ]

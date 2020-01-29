@@ -20,6 +20,22 @@
         "name": "Eclectic Approach"
     },
     {
+        "code": "HE",
+        "name": "Hit Explosion"
+    },
+    {
+        "code": "JA",
+        "name": "James Apollo"
+    },
+    {
+        "code": "JR",
+        "name": "James Redfern"
+    },
+    {
+        "code": "KZ",
+        "name": "Kaz"
+    },
+    {
         "code": "LD",
         "name": "Lowdown Drifters"
     },
@@ -34,6 +50,10 @@
     {
         "code": "SM",
         "name": "Sweetkiss Momma"
+    },
+    {
+        "code": "SN",
+        "name": "Stephen Newby"
     },
     {
         "code": "SO",

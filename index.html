@@ -4,15 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gig Data Cruncher</title>
-    <link href="https://fonts.googleapis.com/css?family=Bangers|Roboto&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <title>Gig Data Cruncher</title>
+
+    <!-- Style Sheets -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Sigmar+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/base.css">
     <link rel="stylesheet" type="text/css" href="/css/tabs.css">
 </head>
 <body>
     <div class="wrapper">
         <h1>Gig Data Cruncher</h1>
+        <p>Select a year for gigs:</p>
+
+        <div>
+            <input type="radio" id="gigs-2020" name="gigs" value="gigs-2020" checked>
+            <label for="gigs-2020">2020 Gigs</label>
+        </div>
+        <div>
+            <input type="radio" id="gigs-2019" name="gigs" value="gigs-2019">
+            <label for="gigs-2019">2019 Gigs</label>
+        </div>
+
         <div class="tabs">
             <div role="tablist" aria-label="data sets">
                 <button role="tab" aria-selected="true" id="gig-breakdown">
@@ -59,6 +72,7 @@
         </div>
     </div>
 
+    <!-- Scripts -->
     <script type="text/javascript" src="js/gigs.js"></script>
     <script type="text/javascript" src="js/tabs.js"></script>
 </body>

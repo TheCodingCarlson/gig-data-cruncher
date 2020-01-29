@@ -51,7 +51,7 @@ try {
             gigTableBody.insertAdjacentHTML('beforeend', html);
         });
 
-        bandGigData.sort((a, b) => a.name > b.name ? 1 : -1);
+        bandGigData.sort((a, b) => a.gigCount < b.gigCount ? 1 : -1);
 
         bandGigData.map(band => {
             let bandHtml = `
