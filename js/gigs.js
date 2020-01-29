@@ -70,6 +70,14 @@ try {
                 <td>${ gigData.length }</td>
             </tr>
             <tr>
+                <td>Total # of Paid Gigs</td>
+                <td>${ gigData.filter(gig => gig.pay).length }</td>
+            </tr>
+            <tr>
+                <td>Total # of Unpaid Gigs</td>
+                <td>${ gigData.filter(gig => !gig.pay).length }</td>
+            </tr>
+            <tr>
                 <td>Total # of Bands</td>
                 <td>${ bands.length }</td>
             </tr>
