@@ -62,3 +62,12 @@ h6 {
     font-family: 'Sigmar One', cursive;
     -webkit-text-stroke: 1px var(--dark-blue);
 }
+
+.radio-container {
+    padding: 24px;
+    background-color: var(--blue);
+    margin-bottom: 12px;
+    border-radius: 5px;
+    width: fit-content;
+    position: relative;
+}
