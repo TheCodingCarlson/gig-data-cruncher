@@ -45,12 +45,16 @@ function createTables(year) {
                 if (!bandGigData.find(band => band.name === bandName)) {
                     let band = {
                         name: bandName,
-                        gigCount: 1
+                        gigCount: 1,
+                        totalPay: gig.pay ? gig.pay : 0
                     }
     
                     bandGigData.push(band);
                 } else {
-                    bandGigData.find(band => band.name === bandName).gigCount++;
+                    let band = bandGigData.find(band => band.name === bandName);
+
+                    band.gigCount++;
+                    band.totalPay = band.totalPay + (gig.pay ? gig.pay : 0);
                 }
     
                 total = gig.pay ? total += gig.pay : total += 0;
@@ -64,6 +68,7 @@ function createTables(year) {
                     <tr>
                         <td>${ band.name }</td>
                         <td>${ band.gigCount }</td>
+                        <td>${ band.totalPay }</td>
                     </tr>
                 `;
     
