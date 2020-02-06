@@ -12,8 +12,20 @@
         "name": "Carder Ferry"
     },
     {
+        "code": "CM",
+        "name": "Chance McKinney"
+    },
+    {
         "code": "DJ",
         "name": "Darin Jones and the Last Men Standing"
+    },
+    {
+        "code": "DO",
+        "name": "Dana Osborn"
+    },
+    {
+        "code": "DR",
+        "name": "Dean Reichert"
     },
     {
         "code": "EA",
@@ -30,6 +42,10 @@
     {
         "code": "JR",
         "name": "James Redfern"
+    },
+    {
+        "code": "JM",
+        "name": "Jared Mitchell"
     },
     {
         "code": "KZ",
@@ -58,6 +74,10 @@
     {
         "code": "SO",
         "name": "SideOne"
+    },
+    {
+        "code": "TL",
+        "name": "Tubaluba"
     },
     {
         "code": "TM",

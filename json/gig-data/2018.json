@@ -1,0 +1,409 @@
+[
+    {
+        "date": "01-13-2018",
+        "venue": "Crystal Mountain Resort",
+        "city": "Enumclaw",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 265
+    },
+    {
+        "date": "01-13-2018",
+        "venue": "Pine Lake Community Center",
+        "city": "Sammamish",
+        "state": "WA",
+        "bandCode": "CF",
+        "pay": 263
+    },
+    {
+        "date": "02-10-2018",
+        "venue": "Private Event",
+        "city": "Poulsbo",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 200
+    },
+    {
+        "date": "02-23-2018",
+        "venue": "Engels Pub",
+        "city": "Edmonds",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 100
+    },
+    {
+        "date": "03-16-2018",
+        "venue": "The Little Red Hen",
+        "city": "Seattle",
+        "state": "WA",
+        "bandCode": "CM",
+        "pay": 250
+    },
+    {
+        "date": "03-17-2018",
+        "venue": "Quil Ceda Creek Casino",
+        "city": "Marysville",
+        "state": "WA",
+        "bandCode": "CM",
+        "pay": 250
+    },
+    {
+        "date": "03-23-2018",
+        "venue": "NA",
+        "city": "Tri-Cities",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 150
+    },
+    {
+        "date": "03-24-2018",
+        "venue": "NA",
+        "city": "Tri-Cities",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 150
+    },
+    {
+        "date": "03-31-2018",
+        "venue": "Crystal Mountain Resort",
+        "city": "Enumclaw",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 250
+    },
+    {
+        "date": "04-21-2018",
+        "venue": "Quil Ceda Creek Casino",
+        "city": "Marysville",
+        "state": "WA",
+        "bandCode": "CM",
+        "pay": 250
+    },
+    {
+        "date": "04-28-2018",
+        "venue": "Peabo's Sports Bar & Grill",
+        "city": "Mill Creek",
+        "state": "WA",
+        "bandCode": "DO",
+        "pay": 100
+    },
+    {
+        "date": "05-12-2018",
+        "venue": "NA",
+        "city": "Bothell",
+        "state": "WA",
+        "bandCode": "DO",
+        "pay": 170
+    },
+    {
+        "date": "06-02-2018",
+        "venue": "Sarg Hubbard Park",
+        "city": "Yakima",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 375
+    },
+    {
+        "date": "06-05-2018",
+        "venue": "NA",
+        "city": "Seattle",
+        "state": "WA",
+        "bandCode": "JM",
+        "pay": 100
+    },
+    {
+        "date": "06-14-2018",
+        "venue": "NA",
+        "city": "Seattle",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 250
+    },
+    {
+        "date": "06-16-2018",
+        "venue": "Summer Concert Series",
+        "city": "Puyallup",
+        "state": "WA",
+        "bandCode": "SM",
+        "pay": 200
+    },
+    {
+        "date": "06-22-2018",
+        "venue": "Silver Ridge Ranch",
+        "city": "Easton",
+        "state": "WA",
+        "bandCode": "SM",
+        "pay": 200
+    },
+    {
+        "date": "06-23-2018",
+        "venue": "Summer Concert Series",
+        "city": "Richland",
+        "state": "WA",
+        "bandCode": "EA",
+        "pay": 300
+    },
+    {
+        "date": "06-30-2018",
+        "venue": "High Dive",
+        "city": "Seattle",
+        "state": "WA",
+        "bandCode": "EA",
+        "pay": 200
+    },
+    {
+        "date": "06-30-2018",
+        "venue": "High Dive",
+        "city": "Seattle",
+        "state": "WA",
+        "bandCode": "JR",
+        "pay": 60
+    },
+    {
+        "date": "07-07-2018",
+        "venue": "Wedding",
+        "city": "Spokane",
+        "state": "WA",
+        "bandCode": "TL",
+        "pay": 175
+    },
+    {
+        "date": "07-14-2018",
+        "venue": "Summer Concert Series",
+        "city": "Tacoma",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 200
+    },
+    {
+        "date": "07-14-2018",
+        "venue": "Muckleshoot Casino Resort",
+        "city": "Auburn",
+        "state": "WA",
+        "bandCode": "DO",
+        "pay": 170
+    },
+    {
+        "date": "07-20-2018",
+        "venue": "Brodie Nation",
+        "city": "Carnation",
+        "state": "WA",
+        "bandCode": "SM",
+        "pay": 200
+    },
+    {
+        "date": "07-27-2018",
+        "venue": "Summer Concert Series",
+        "city": "Tenino",
+        "state": "WA",
+        "bandCode": "DJ",
+        "pay": 250
+    },
+    {
+        "date": "07-28-2018",
+        "venue": "Summer Concert Series",
+        "city": "Troutdale",
+        "state": "OR",
+        "bandCode": "DJ",
+        "pay": 250
+    },
+    {
+        "date": "08-03-2018",
+        "venue": "DeLille Cellars",
+        "city": "Woodinville",
+        "state": "WA",
+        "bandCode": "SO",
+        "pay": 500
+    },
+    {
+        "date": "08-04-2018",
+        "venue": "Seattle Golf Club",
+        "city": "Seattle",
+        "state": "WA",
+        "bandCode": "SO",
+        "pay": 500
+    },
+    {
+        "date": "08-18-2018",
+        "venue": "Summer Concert Series",
+        "city": "Snoqualmie",
+        "state": "WA",
+        "bandCode": "SM",
+        "pay": 200
+    },
+    {
+        "date": "08-24-2018",
+        "venue": "The Vogue",
+        "city": "Chelan",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 150
+    },
+    {
+        "date": "08-25-2018",
+        "venue": "Old Schoolhouse Brewery",
+        "city": "Winthrop",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 260
+    },
+    {
+        "date": "08-31-2018",
+        "venue": "Swinomish Casino & Lodge",
+        "city": "Anacortes",
+        "state": "WA",
+        "bandCode": "DO",
+        "pay": 170
+    },
+    {
+        "date": "09-01-2018",
+        "venue": "Swinomish Casino & Lodge",
+        "city": "Anacortes",
+        "state": "WA",
+        "bandCode": "DO",
+        "pay": 170
+    },
+    {
+        "date": "09-08-2018",
+        "venue": "Pacific Science Center",
+        "city": "Seattle",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 100
+    },
+    {
+        "date": "09-15-2018",
+        "venue": "The Brick",
+        "city": "Roslyn",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 180
+    },
+    {
+        "date": "09-16-2018",
+        "venue": "Tractor Tavern",
+        "city": "Seattle",
+        "state": "WA",
+        "bandCode": "SM",
+        "pay": 50
+    },
+    {
+        "date": "09-22-2018",
+        "venue": "Private Event - Rained Out",
+        "city": "Seattle",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 150
+    },
+    {
+        "date": "09-23-2018",
+        "venue": "Parent's House - Dad's 70th",
+        "city": "Kirkland",
+        "state": "WA",
+        "bandCode": "TS"
+    },
+    {
+        "date": "09-25-2018",
+        "venue": "Hard Rock Cafe",
+        "city": "Seattle",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 250
+    },
+    {
+        "date": "10-12-2018",
+        "venue": "Engels Pub",
+        "city": "Edmonds",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 120
+    },
+    {
+        "date": "10-14-2018",
+        "venue": "Anchor Pub",
+        "city": "Everett",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 60
+    },
+    {
+        "date": "10-20-2018",
+        "venue": "Wedding",
+        "city": "Portland",
+        "state": "OR",
+        "bandCode": "JA",
+        "pay": 400
+    },
+    {
+        "date": "10-25-2018",
+        "venue": "NA",
+        "city": "Richland",
+        "state": "WA",
+        "bandCode": "EA",
+        "pay": 250
+    },
+    {
+        "date": "11-17-2018",
+        "venue": "Private Event",
+        "city": "Seattle",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 270
+    },
+    {
+        "date": "11-29-2018",
+        "venue": "Hollywood Tavern",
+        "city": "Woodinville",
+        "state": "WA",
+        "bandCode": "EA",
+        "pay": 250
+    },
+    {
+        "date": "12-01-2018",
+        "venue": "Louie G's Pizzeria",
+        "city": "Fife",
+        "state": "WA",
+        "bandCode": "EA",
+        "pay": 100
+    },
+    {
+        "date": "12-06-2018",
+        "venue": "The Cedar Stump",
+        "city": "Arlington",
+        "state": "WA",
+        "bandCode": "DR",
+        "pay": 100
+    },
+    {
+        "date": "12-07-2018",
+        "venue": "Tulalip Resort Casino",
+        "city": "Tulalip",
+        "state": "WA",
+        "bandCode": "DJ",
+        "pay": 250
+    },
+    {
+        "date": "12-13-2018",
+        "venue": "The Cedar Stump",
+        "city": "Arlington",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 100
+    },
+    {
+        "date": "12-29-2018",
+        "venue": "Crystal Mountain Resort",
+        "city": "Enumclaw",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 250
+    },
+    {
+        "date": "12-31-2018",
+        "venue": "Private Event",
+        "city": "Gig Harbor",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 350
+    }
+]
