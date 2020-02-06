@@ -4,31 +4,39 @@ const gigTableBody = document.querySelector('.gig-table-body');
 const bandTableBody = document.querySelector('.band-table-body');
 const dataTableBody = document.querySelector('.data-table-body');
 const bandGigsTableBody = document.querySelector('.band-gigs-table-body');
+
 const radioButtons = document.querySelectorAll('input[type="radio"]');
+const years = Array.from(radioButtons).map(radio => radio.value);
+
 const modalInner = document.querySelector('.modal-inner');
 const modalOuter = document.querySelector('.modal-outer');
 const modalCloseButton = document.querySelector('.modal-close-button');
 const modalBandName = document.querySelector('.modal-band-name');
 let modalButtons;
 
-// State
-const state = {
+const data = {
     selectedYear: Array.from(radioButtons).find(radio => radio.checked).value,
-    gigData: [],
-    bandData: [],
-    bandGigData: [],
-    bands: [],
-    cities: [],
-    states: [],
-    totalPay: 0,
-    totalGigs: 0,
-    paidGigs: 0,
-    unpaidGigs: 0,
-    averagePayPerGig: 0,
+    years: [],
+    bands: []
 };
 
-function clearTables(tables) {
-    tables.forEach(table => table.innerHTML = '');
+class GigYear {
+    constructor() {
+        this.gigData = [];
+        this.bandData = [];
+        this.bands = [];
+        this.cities = [];
+        this.states = [];
+        this.totalPay = 0;
+        this.totalGigs = 0;
+        this.paidGigs = 0;
+        this.unpaidGigs = 0;
+        this.averagePayPerGig = 0;
+    }
+};
+
+function findDataByYear() {
+    return yearData = data.years.find(year => year.year === data.selectedYear);
 }
 
 function generateGigRow(gig, bandName = '') {
@@ -46,17 +54,16 @@ function generateGigRow(gig, bandName = '') {
     return html;
 }
 
-function createGigTable(gigData) {
-    gigData.map(gig => {
-        let bandName = state.bandData.find(band => band.code === gig.bandCode).name;
+function createGigTable(yearData) {
+    yearData.gigData.map(gig => {
+        let bandName = data.bands.find(band => band.code === gig.bandCode).name;
         let html = generateGigRow(gig, bandName);
-
         gigTableBody.insertAdjacentHTML('beforeend', html);
     });
 }
 
-function createBandTable(bandGigData) {
-    bandGigData.map((band, index) => {
+function createBandTable(bandData) {
+    bandData.map((band, index) => {
         let bandHtml = `
             <tr>
                 <td>${ band.name }</td>
@@ -71,72 +78,89 @@ function createBandTable(bandGigData) {
     });
 }
 
-function createDataTable(state) {
+function createDataTable(data) {
     const dataHtml = `
         <tr>
             <td>Total # of Gigs</td>
-            <td>${ state.gigData.length }</td>
+            <td>${ data.gigData.length }</td>
         </tr>
         <tr>
             <td>Total # of Paid Gigs</td>
-            <td>${ state.paidGigs }</td>
+            <td>${ data.paidGigs }</td>
         </tr>
         <tr>
             <td>Total # of Unpaid Gigs</td>
-            <td>${ state.unpaidGigs }</td>
+            <td>${ data.unpaidGigs }</td>
         </tr>
         <tr>
             <td>Total # of Bands</td>
-            <td>${ state.bands.length }</td>
+            <td>${ data.bands.length }</td>
         </tr>
         <tr>
             <td>Total # of Cities</td>
-            <td>${ state.cities.length }</td>
+            <td>${ data.cities.length }</td>
         </tr>
         <tr>
             <td>Total # of States</td>
-            <td>${ state.states.length }</td>
+            <td>${ data.states.length }</td>
         </tr>
         <tr>
             <td>Total Pay</td>
-            <td>${ state.totalPay }</td>
+            <td>${ data.totalPay }</td>
         </tr>
         <tr>
             <td>Average Pay (paid gigs only)</td>
-            <td>${ state.averagePayPerGig }</td>
+            <td>${ data.averagePayPerGig }</td>
         </tr>
     `;
     
     dataTableBody.insertAdjacentHTML('beforeend', dataHtml);
 }
 
-async function fetchData(url) {
-    const value = await fetch(url);
-    return value.json();
+async function fetchData() {
+    const yearDataPomises = years.map(year => fetch(`./json/gig-data/${year}.json`).then(value => value.json()));
+    const bandDataPromise = fetch('./json/band-data.json').then(value => value.json());
+    const promises = await Promise.all([...yearDataPomises, bandDataPromise]);
+    return promises;
 }
 
-async function populateState(year) {
-    state.gigData = await fetchData(`./json/gig-data/${year}.json`);
-    state.bandData = await fetchData('./json/band-data.json');
-    state.bandGigData = [];
+async function loadData() {
+    const rawData = await fetchData();
+    const bandData = rawData[rawData.length - 1]; // band data will always be the last item in the array
 
-    state.bands = [ ...new Set(state.gigData.map(gig => gig.bandCode)) ];
-    state.cities = [ ...new Set(state.gigData.map(gig => gig.city)) ];
-    state.states = [ ...new Set(state.gigData.map(gig => gig.state)) ];
+    data.bands = bandData;
+    
+    for (let i = 0; i < rawData.length - 1; i++) {
+        let yearObj = {
+            year: years[i],
+            data: populateYearData(rawData[i], bandData)
+        }
 
-    state.totalPay = state.gigData.reduce((total, gig) => {
+        data.years.push(yearObj);
+    }
+}
+
+function populateYearData(gigData, bandData) {
+    const gigYearObj = new GigYear();
+
+    gigYearObj.gigData = gigData;
+    gigYearObj.bands = [ ...new Set(gigData.map(gig => gig.bandCode)) ];
+    gigYearObj.cities = [ ...new Set(gigData.map(gig => gig.city)) ];
+    gigYearObj.states = [ ...new Set(gigData.map(gig => gig.state)) ];
+
+    gigYearObj.totalGigs = gigData.length;
+    gigYearObj.totalPay = gigData.reduce((total, gig) => {
         let pay = gig.pay ? gig.pay : 0;
         return total + pay;
     }, 0);
 
-    state.totalGigs = state.gigData.length;
-    state.paidGigs = state.gigData.filter(gig => gig.pay).length;
-    state.unpaidGigs = state.gigData.filter(gig => !gig.pay).length;
-    state.averagePayPerGig = Math.round(state.totalPay / state.paidGigs);
+    gigYearObj.paidGigs = gigData.filter(gig => gig.pay).length;
+    gigYearObj.unpaidGigs = gigData.filter(gig => !gig.pay).length;
+    gigYearObj.averagePayPerGig = Math.round(gigYearObj.totalPay / gigYearObj.paidGigs);
 
-    state.gigData.map(gig => {
-        let bandName = state.bandData.find(band => band.code === gig.bandCode).name;
-        let band = state.bandGigData.find(band => band.name === bandName);
+    gigData.map(gig => {
+        let bandName = bandData.find(band => band.code === gig.bandCode).name;
+        let band = gigYearObj.bandData.find(band => band.name === bandName);
 
         if (!band) {
             band = {
@@ -147,7 +171,7 @@ async function populateState(year) {
                 gigs: [ gig ]
             }
 
-            state.bandGigData.push(band);
+            gigYearObj.bandData.push(band);
         } else {
             band.gigCount++;
             band.totalPay = band.totalPay + (gig.pay ? gig.pay : 0);
@@ -156,16 +180,15 @@ async function populateState(year) {
         }
     }); 
     
-    state.bandGigData.sort((a, b) => a.gigCount < b.gigCount ? 1 : -1);
-    return state;
+    gigYearObj.bandData.sort((a, b) => a.gigCount < b.gigCount ? 1 : -1);
+    return gigYearObj;
 }
 
-async function renderData(year) {
-    await populateState(year);
+async function renderData(data) {
     clearTables([gigTableBody, bandTableBody, dataTableBody]);
-    createGigTable(state.gigData);
-    createBandTable(state.bandGigData);
-    createDataTable(state);
+    createGigTable(data.data);
+    createBandTable(data.data.bandData);
+    createDataTable(data.data);
     
     modalButtons = document.querySelectorAll('.modal-button');
     modalButtons.forEach(button => button.addEventListener('click', handleModalButtonClick));
@@ -173,27 +196,31 @@ async function renderData(year) {
 
 function handleRadioButtonChange(e) {
     const year = e.currentTarget.value;
-    state.selectedYear = year;
-    renderData(state.selectedYear);
+    data.selectedYear = year;
+    renderData(findDataByYear());
 }
 
 function handleModalButtonClick(e) {
     const id = e.currentTarget.id;
     const index = parseInt(id.slice(9, id.length));
-    const band = state.bandGigData[index];
+    const bandData = data.years.find(year => year.year === data.selectedYear).data.bandData[index];
 
-    band.gigs.forEach(gig => {
+    bandData.gigs.forEach(gig => {
         let html = generateGigRow(gig);
         bandGigsTableBody.insertAdjacentHTML('beforeend', html);
     });
 
-    modalBandName.innerText = `${band.name} Gigs - ${ state.selectedYear }`;
+    modalBandName.innerText = `${bandData.name} Gigs - ${ data.selectedYear }`;
     modalOuter.classList.add('open');
 }
 
 function closeModal() {
     modalOuter.classList.remove('open');
     clearTables([bandGigsTableBody]);
+}
+
+function clearTables(tables) {
+    tables.forEach(table => table.innerHTML = '');
 }
 
 radioButtons.forEach(radio => radio.addEventListener('change', handleRadioButtonChange));
@@ -207,7 +234,11 @@ modalOuter.addEventListener('click', function(e) {
     }
 });
 
-window.addEventListener('load', renderData(state.selectedYear));
+window.addEventListener('load', async function() {
+    await loadData();
+    renderData(findDataByYear());
+});
+
 window.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
         closeModal();
