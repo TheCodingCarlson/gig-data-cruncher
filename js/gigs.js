@@ -3,7 +3,13 @@
 const gigTableBody = document.querySelector('.gig-table-body');
 const bandTableBody = document.querySelector('.band-table-body');
 const dataTableBody = document.querySelector('.data-table-body');
+const bandGigsTableBody = document.querySelector('.band-gigs-table-body');
 const radioButtons = document.querySelectorAll('input[type="radio"]');
+const modalInner = document.querySelector('.modal-inner');
+const modalOuter = document.querySelector('.modal-outer');
+const modalCloseButton = document.querySelector('.modal-close-button');
+const modalBandName = document.querySelector('.modal-band-name');
+let modalButtons;
 
 // State
 const state = {
@@ -25,33 +31,39 @@ function clearTables(tables) {
     tables.forEach(table => table.innerHTML = '');
 }
 
+function generateGigRow(gig, bandName = '') {
+    let html = `
+        <tr>
+            <td>${ gig.date }</td>
+            <td>${ gig.venue }</td>
+            <td>${ gig.city }</td>
+            <td>${ gig.state }</td>
+            ${ bandName !== '' ? `<td>${ bandName }</td>` : '' }
+            <td>${ gig.pay ? gig.pay : 'NA' }</td>
+        </tr>
+    `;
+
+    return html;
+}
+
 function createGigTable(gigData) {
     gigData.map(gig => {
         let bandName = state.bandData.find(band => band.code === gig.bandCode).name;
-        let html = `
-            <tr>
-                <td>${ gig.date }</td>
-                <td>${ gig.venue }</td>
-                <td>${ gig.city }</td>
-                <td>${ gig.state }</td>
-                <td>${ bandName }</td>
-                <td>${ gig.pay ? gig.pay : 'NA' }</td>
-            </tr>
-        `;
+        let html = generateGigRow(gig, bandName);
 
         gigTableBody.insertAdjacentHTML('beforeend', html);
     });
 }
 
 function createBandTable(bandGigData) {
-    bandGigData.map(band => {
+    bandGigData.map((band, index) => {
         let bandHtml = `
             <tr>
                 <td>${ band.name }</td>
                 <td>${ band.gigCount }</td>
                 <td>${ band.totalPay }</td>
                 <td>${ band.averagePayPerGig }</td>
-                <td><button>See Gigs</button></td>
+                <td><button id="m-button-${ index }" class="modal-button">See Gigs</button></td>
             </tr>
         `;
 
@@ -145,7 +157,6 @@ async function populateState(year) {
     }); 
     
     state.bandGigData.sort((a, b) => a.gigCount < b.gigCount ? 1 : -1);
-    console.log(state);
     return state;
 }
 
@@ -155,6 +166,9 @@ async function renderData(year) {
     createGigTable(state.gigData);
     createBandTable(state.bandGigData);
     createDataTable(state);
+    
+    modalButtons = document.querySelectorAll('.modal-button');
+    modalButtons.forEach(button => button.addEventListener('click', handleModalButtonClick));
 }
 
 function handleRadioButtonChange(e) {
@@ -163,5 +177,39 @@ function handleRadioButtonChange(e) {
     renderData(state.selectedYear);
 }
 
+function handleModalButtonClick(e) {
+    const id = e.currentTarget.id;
+    const index = parseInt(id.slice(9, id.length));
+    const band = state.bandGigData[index];
+
+    band.gigs.forEach(gig => {
+        let html = generateGigRow(gig);
+        bandGigsTableBody.insertAdjacentHTML('beforeend', html);
+    });
+
+    modalBandName.innerText = `${band.name} Gigs - ${ state.selectedYear }`;
+    modalOuter.classList.add('open');
+}
+
+function closeModal() {
+    modalOuter.classList.remove('open');
+    clearTables([bandGigsTableBody]);
+}
+
 radioButtons.forEach(radio => radio.addEventListener('change', handleRadioButtonChange));
+modalCloseButton.addEventListener('click', closeModal);
+
+modalOuter.addEventListener('click', function(e) {
+    const isOutside = !e.target.closest('.modal-inner');
+
+    if (isOutside) {
+        closeModal();
+    }
+});
+
 window.addEventListener('load', renderData(state.selectedYear));
+window.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+        closeModal();
+    }
+});

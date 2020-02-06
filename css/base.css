@@ -26,29 +26,7 @@ body {
     color: whitesmoke;
 }
 
-/* Table Styles */
-
-table {
-    border-collapse: collapse;
-}
-  
-td, th {
-    border: 2px solid var(--dark-tan);
-    padding: 1rem;
-}
-
-/* Helper Divs */
-
-.wrapper {
-    max-width: 1000px;
-    margin: 4rem auto;
-    padding: 2rem;
-    background: var(--dark-tan);
-}
-  
-.box, .wrapper {
-    box-shadow: 0 0 3px 5px rgba(0,0,0,0.08653);
-}
+/* Headings */
 
 h1,
 h2,
@@ -63,6 +41,29 @@ h6 {
     -webkit-text-stroke: 1px var(--dark-blue);
 }
 
+/* Buttons */
+
+button {
+    background: var(--dark-blue);
+    border: 0;
+    cursor: pointer;
+    padding: 12px;
+    color: var(--tan);
+}
+
+/* Table Styles */
+
+table {
+    border-collapse: collapse;
+}
+  
+td, th {
+    border: 2px solid var(--dark-tan);
+    padding: 1rem;
+}
+
+/* Radios */
+
 .radio-container {
     padding: 24px;
     background-color: var(--blue);
@@ -70,4 +71,21 @@ h6 {
     border-radius: 5px;
     width: fit-content;
     position: relative;
+}
+
+.radio-container p {
+    margin-top: 0;
+}
+
+/* Helper Divs */
+
+.wrapper {
+    max-width: 1000px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background: var(--dark-tan);
+}
+  
+.box, .wrapper, .modal-inner {
+    box-shadow: 0 0 3px 5px rgba(0,0,0,0.08653);
 }

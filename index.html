@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Oswald|Sigmar+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/base.css">
     <link rel="stylesheet" type="text/css" href="/css/tabs.css">
+    <link rel="stylesheet" type="text/css" href="/css/modal.css">
 </head>
 <body>
     <div class="wrapper">
@@ -31,13 +32,13 @@
 
         <div class="tabs">
             <div role="tablist" aria-label="data sets">
-                <button role="tab" aria-selected="true" id="gig-breakdown">
+                <button class="tab" role="tab" aria-selected="true" id="gig-breakdown">
                     Gig Breakdown
                 </button>
-                <button role="tab" aria-selected="false" id="band-breakdown">
+                <button class="tab" role="tab" aria-selected="false" id="band-breakdown">
                     Band Breakdown
                 </button>
-                <button role="tab" aria-selected="false" id="data-breakdown">
+                <button class="tab" role="tab" aria-selected="false" id="data-breakdown">
                     Data Breakdown
                 </button>
             </div>
@@ -64,6 +65,25 @@
                     </thead>
                     <tbody class="band-table-body"></tbody>
                 </table>
+
+                <div class="modal-outer">
+                    <div class="modal-inner">
+                        <h3 class="modal-band-name"></h3>
+                        <div class="modal-table-wrapper">
+                            <table>
+                                <thead>
+                                    <th>Date</th>
+                                    <th>Venue</th>
+                                    <th>City</th>
+                                    <th>State</th>
+                                    <th>Pay</th>
+                                </thead>
+                                <tbody class="band-gigs-table-body"></tbody>
+                            </table>
+                        </div>
+                        <button class="modal-close-button" aria-label="close modal">&times;</button>
+                    </div>
+                </div>
             </div>
             <div role="tabpanel" aria-labelledby="data-breakdown" hidden>
                 <table>
