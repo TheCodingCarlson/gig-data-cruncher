@@ -16,44 +16,32 @@
 <body>
     <div class="wrapper">
         <h1>Gig Data Cruncher</h1>
-
+    
         <div class="cards">
             <div class="card">
-                <p>Select A Year:</p>
+                <p>Select Year:</p>
     
                 <ul class="radio-button-list">
                     <li class="radio-button">
                         <input type="radio" id="gigs-2020" name="gigs" value="2020" checked>
-                        <label for="gigs-2020">2020 Gigs</label>
+                        <label for="gigs-2020">2020</label>
                     </li>
                     <li class="radio-button">
                         <input type="radio" id="gigs-2019" name="gigs" value="2019">
-                        <label for="gigs-2019">2019 Gigs</label>
+                        <label for="gigs-2019">2019</label>
                     </li>
                     <li class="radio-button">
                         <input type="radio" id="gigs-2018" name="gigs" value="2018">
-                        <label for="gigs-2018">2018 Gigs</label>
+                        <label for="gigs-2018">2018</label>
+                    </li>
+                    <li class="radio-button">
+                        <input type="radio" id="gigs-2017" name="gigs" value="2017">
+                        <label for="gigs-2017">2017</label>
                     </li>
                 </ul>
             </div>
-    
-            <div class="card">
-                <p>Year Breakdown:</p>
-                <table>
-                    <thead>
-                        <th>Year</th>
-                        <th>Total Gigs</th>
-                        <th>Total Bands</th>
-                        <th>Total Cities</th>
-                        <th>Total States</th>
-                        <th>Total Pay</th>
-                    </thead>
-                    <tbody class="year-table-body"></tbody>
-                </table>
-            </div>
         </div>
 
-        <h2>Specific Data For - <span class="year"></span></h2>
         <div class="tabs">
             <div role="tablist" aria-label="data sets">
                 <button class="tab" role="tab" aria-selected="true" id="gig-breakdown">
@@ -64,6 +52,9 @@
                 </button>
                 <button class="tab" role="tab" aria-selected="false" id="data-breakdown">
                     Data Breakdown
+                </button>
+                <button class="tab" role="tab" aria-selected="false" id="year-breakdown">
+                    Year Breakdown
                 </button>
             </div>
             <div role="tabpanel" aria-labelledby="gig-breakdown">
@@ -89,7 +80,6 @@
                     </thead>
                     <tbody class="band-table-body"></tbody>
                 </table>
-
                 <div class="modal-outer">
                     <div class="modal-inner">
                         <h3 class="modal-band-name"></h3>
@@ -109,6 +99,7 @@
                     </div>
                 </div>
             </div>
+
             <div role="tabpanel" aria-labelledby="data-breakdown" hidden>
                 <table>
                     <thead>
@@ -116,6 +107,21 @@
                         <th>Value</th>
                     </thead>
                     <tbody class="data-table-body"></tbody>
+                </table>
+            </div>
+
+            <div role="tabpanel" aria-labelledby="year-breakdown" hidden>
+                <table>
+                    <thead>
+                        <th>Year</th>
+                        <th>Total Gigs</th>
+                        <th>Total Bands</th>
+                        <th>Total Cities</th>
+                        <th>Total States</th>
+                        <th>Total Pay</th>
+                        <th>Highest Paying Gig(s)</th>
+                    </thead>
+                    <tbody class="year-table-body"></tbody>
                 </table>
             </div>
         </div>

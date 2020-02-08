@@ -4,6 +4,10 @@
         "name": "The BGP"
     },
     {
+        "code": "BN",
+        "name": "Billy North"
+    },
+    {
         "code": "BP",
         "name": "Bradely Allen Patton"
     },
@@ -14,6 +18,10 @@
     {
         "code": "CM",
         "name": "Chance McKinney"
+    },
+    {
+        "code": "CT",
+        "name": "Chebon Tiger"
     },
     {
         "code": "DJ",
@@ -60,8 +68,20 @@
         "name": "Leah Tussing"
     },
     {
+        "code": "NE",
+        "name": "Nichol Eskridge"
+    },
+    {
+        "code": "PK",
+        "name": "Pavel Kulick"
+    },
+    {
         "code": "RT",
         "name": "Rafael Tranquilino"
+    },
+    {
+        "code": "SG",
+        "name": "Stay Grounded"
     },
     {
         "code": "SM",
@@ -86,5 +106,9 @@
     {
         "code": "TS",
         "name": "The Slacks"
+    },
+    {
+        "code": "WC",
+        "name": "Westgate Chapel Worship"
     }
 ]

@@ -1,0 +1,474 @@
+[
+    {
+        "date": "01-15-2017",
+        "venue": "Westgate Chapel",
+        "city": "Edmonds",
+        "state": "WA",
+        "bandCode": "WC",
+        "pay": 200
+    },
+    {
+        "date": "01-29-2017",
+        "venue": "The Wild Hare",
+        "city": "Marysville",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 85
+    },
+    {
+        "date": "02-03-2017",
+        "venue": "Engels Pub",
+        "city": "Edmonds",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 140
+    },
+    {
+        "date": "02-04-2017",
+        "venue": "Page Cellars",
+        "city": "Woodinville",
+        "state": "WA",
+        "bandCode": "SG",
+        "pay": 110
+    },
+    {
+        "date": "02-18-2017",
+        "venue": "NA",
+        "city": "Seattle",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 220
+    },
+    {
+        "date": "02-19-2017",
+        "venue": "Westgate Chapel",
+        "city": "Edmonds",
+        "state": "WA",
+        "bandCode": "WC",
+        "pay": 200
+    },
+    {
+        "date": "03-18-2017",
+        "venue": "Quil Ceda Creek Casino",
+        "city": "Marysville",
+        "state": "WA",
+        "bandCode": "CM",
+        "pay": 250
+    },
+    {
+        "date": "03-19-2017",
+        "venue": "Westgate Chapel",
+        "city": "Edmonds",
+        "state": "WA",
+        "bandCode": "WC",
+        "pay": 200
+    },
+    {
+        "date": "03-25-2017",
+        "venue": "Crystal Mountain Resort",
+        "city": "Enumclaw",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 250
+    },
+    {
+        "date": "03-26-2017",
+        "venue": "Westgate Chapel",
+        "city": "Edmonds",
+        "state": "WA",
+        "bandCode": "WC",
+        "pay": 200
+    },
+    {
+        "date": "04-01-2017",
+        "venue": "The Brick",
+        "city": "Roslyn",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 172
+    },
+    {
+        "date": "04-08",
+        "venue": "Guitar Festival",
+        "city": "Walla Walla",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 200
+    },
+    {
+        "date": "04-16-2017",
+        "venue": "Westgate Chapel",
+        "city": "Edmonds",
+        "state": "WA",
+        "bandCode": "WC",
+        "pay": 300
+    },
+    {
+        "date": "04-22-2017",
+        "venue": "Quil Ceda Creek Casino",
+        "city": "Marysville",
+        "state": "WA",
+        "bandCode": "CM",
+        "pay": 250
+    },
+    {
+        "date": "05-21-2017",
+        "venue": "Westgate Chapel",
+        "city": "Edmonds",
+        "state": "WA",
+        "bandCode": "WC",
+        "pay": 200
+    },
+    {
+        "date": "05-28-2017",
+        "venue": "NA",
+        "city": "NA",
+        "state": "CA",
+        "bandCode": "CM",
+        "pay": 250
+    },
+    {
+        "date": "05-30-2017",
+        "venue": "Private Event",
+        "city": "Longview",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 400
+    },
+    {
+        "date": "06-02-2017",
+        "venue": "Private Event",
+        "city": "Seattle",
+        "state": "WA",
+        "bandCode": "JA",
+        "pay": 200
+    },
+    {
+        "date": "06-03-2017",
+        "venue": "Rockin'M BBQ, Golf Range & Lounge",
+        "city": "Everett",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 157
+    },
+    {
+        "date": "06-09-2017",
+        "venue": "Kamiah Hotel Bar and Grill",
+        "city": "Kamiah",
+        "state": "ID",
+        "bandCode": "RT",
+        "pay": 187
+    },
+    {
+        "date": "06-10-2017",
+        "venue": "Old Schoolhouse Brewery",
+        "city": "Winthrop",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 170
+    },
+    {
+        "date": "06-16-2017",
+        "venue": "Anchor Pub",
+        "city": "Everett",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 120
+    },
+    {
+        "date": "06-17-2017",
+        "venue": "Gordon and Purdy's",
+        "city": "Sumner",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 120
+    },
+    {
+        "date": "06-24-2017",
+        "venue": "Madison Avenue Pub",
+        "city": "Everett",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 100
+    },
+    {
+        "date": "07-04-2017",
+        "venue": "Private Event",
+        "city": "Shoreline",
+        "state": "WA",
+        "bandCode": "BN",
+        "pay": 200
+    },
+    {
+        "date": "07-08-2017",
+        "venue": "NA",
+        "city": "Prosser",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 275
+    },
+    {
+        "date": "07-13-2017",
+        "venue": "NA",
+        "city": "NA",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 290
+    },
+    {
+        "date": "07-13-2017",
+        "venue": "NA",
+        "city": "NA",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 290
+    },
+    {
+        "date": "07-20-2017",
+        "venue": "The Brass Kraken Pub",
+        "city": "Poulsbo",
+        "state": "WA",
+        "bandCode": "CT",
+        "pay": 105
+    },
+    {
+        "date": "07-22-2017",
+        "venue": "The Brick",
+        "city": "Roslyn",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 180
+    },
+    {
+        "date": "07-28-2017",
+        "venue": "Village Taphouse & Grill",
+        "city": "Marysville",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 150
+    },
+    {
+        "date": "07-29-2017",
+        "venue": "Rock Cut Blues Fest",
+        "city": "Orient",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 250
+    },
+    {
+        "date": "08-05-2017",
+        "venue": "Private Event",
+        "city": "Whidbey Island",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 250
+    },
+    {
+        "date": "08-06-2017",
+        "venue": "Westgate Chapel",
+        "city": "Edmonds",
+        "state": "WA",
+        "bandCode": "WC",
+        "pay": 200
+    },
+    {
+        "date": "08-11-2017",
+        "venue": "Marina Park Pavilion",
+        "city": "Kirkland",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 144
+    },
+    {
+        "date": "08-19-2017",
+        "venue": "Hillside Church",
+        "city": "Kent",
+        "state": "WA",
+        "bandCode": "NE",
+        "pay": 200
+    },
+    {
+        "date": "08-20-2017",
+        "venue": "Capps Club",
+        "city": "Kenmore",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 75
+    },
+    {
+        "date": "08-25-2017",
+        "venue": "Private Event",
+        "city": "Whidbey Island",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 250
+    },
+    {
+        "date": "09-02-2017",
+        "venue": "Anchor Pub",
+        "city": "Everett",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 100
+    },
+    {
+        "date": "09-03-2017",
+        "venue": "Westgate Chapel",
+        "city": "Edmonds",
+        "state": "WA",
+        "bandCode": "WC",
+        "pay": 200
+    },
+    {
+        "date": "09-08-2017",
+        "venue": "Private Event",
+        "city": "Seattle",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 250
+    },
+    {
+        "date": "09-09-2017",
+        "venue": "The Brick",
+        "city": "Roslyn",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 180
+    },
+    {
+        "date": "09-17-2017",
+        "venue": "Church",
+        "city": "Tacoma",
+        "state": "WA",
+        "bandCode": "DR",
+        "pay": 120
+    },
+    {
+        "date": "09-22-2017",
+        "venue": "Village Taphouse & Grill",
+        "city": "Marysville",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 150
+    },
+    {
+        "date": "09-23-2017",
+        "venue": "Blues Walk",
+        "city": "North Bend",
+        "state": "WA",
+        "bandCode": "DR",
+        "pay": 120
+    },
+    {
+        "date": "09-28-2017",
+        "venue": "The Cedar Stump",
+        "city": "Arlington",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 120
+    },
+    {
+        "date": "09-29-2017",
+        "venue": "Engels Pub",
+        "city": "Edmonds",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 100
+    },
+    {
+        "date": "10-28-2017",
+        "venue": "Marysville Opera House",
+        "city": "Marysville",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 180
+    },
+    {
+        "date": "11-10-2017",
+        "venue": "Two Vintners",
+        "city": "Woodinville",
+        "state": "WA",
+        "bandCode": "BN",
+        "pay": 200
+    },
+    {
+        "date": "11-11-2017",
+        "venue": "Church",
+        "city": "Federal Way",
+        "state": "WA",
+        "bandCode": "PK",
+        "pay": 300
+    },
+    {
+        "date": "11-17-2017",
+        "venue": "High Dive",
+        "city": "Seattle",
+        "state": "WA",
+        "bandCode": "JR",
+        "pay": 100
+    },
+    {
+        "date": "11-26-2017",
+        "venue": "Westgate Chapel",
+        "city": "Edmonds",
+        "state": "WA",
+        "bandCode": "WC",
+        "pay": 200
+    },
+    {
+        "date": "12-01-2017",
+        "venue": "Private Event",
+        "city": "Seattle",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 300
+    },
+    {
+        "date": "12-14-2017",
+        "venue": "Private Event",
+        "city": "Seattle",
+        "state": "WA",
+        "bandCode": "TS",
+        "pay": 275
+    },
+    {
+        "date": "12-15-2017",
+        "venue": "Engels Pub",
+        "city": "Seattle",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 148
+    },
+    {
+        "date": "12-16-2017",
+        "venue": "Tulalip Resort Casino",
+        "city": "Tulalip",
+        "state": "WA",
+        "bandCode": "DJ",
+        "pay": 250
+    },
+    {
+        "date": "12-23-2017",
+        "venue": "Village Taphouse & Grill",
+        "city": "Marysville",
+        "state": "WA",
+        "bandCode": "RT",
+        "pay": 160
+    },
+    {
+        "date": "12-31-2017",
+        "venue": "Collector's Choice Restaurant",
+        "city": "Snohomish",
+        "state": "WA",
+        "bandCode": "DR",
+        "pay": 300
+    },
+    {
+        "date": "12-31-2017",
+        "venue": "Westgate Chapel",
+        "city": "Edmonds",
+        "state": "WA",
+        "bandCode": "WC",
+        "pay": 200
+    }
+]

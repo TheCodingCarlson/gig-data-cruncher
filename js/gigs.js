@@ -8,7 +8,6 @@ const yearTableBody = document.querySelector('.year-table-body');
 
 const radioButtons = document.querySelectorAll('input[type="radio"]');
 const years = Array.from(radioButtons).map(radio => radio.value);
-const yearSpan = document.querySelector('.year');
 
 const modalInner = document.querySelector('.modal-inner');
 const modalOuter = document.querySelector('.modal-outer');
@@ -52,9 +51,14 @@ function generateGigRow(gig, bandName = '') {
     return html;
 }
 
+function findBandName(bands, gig) {
+    const bandName = bands.find(band => band.code === gig.bandCode).name;
+    return bandName;
+}
+
 function createGigTable(yearData) {
     yearData.gigData.map(gig => {
-        let bandName = data.bands.find(band => band.code === gig.bandCode).name;
+        let bandName = findBandName(data.bands, gig);
         let html = generateGigRow(gig, bandName);
         gigTableBody.insertAdjacentHTML('beforeend', html);
     });
@@ -117,7 +121,14 @@ function createDataTable(data) {
 
 function createYearTable(years) {
     years.forEach(year => {
-        const html = `
+        let highestPayingGig = year.data.gigData.reduce((prevGig, currentGig) => {
+            let currentGigPay = currentGig.pay ? currentGig.pay : 0;
+            return (prevGig.pay >= currentGigPay) ? prevGig : currentGig;
+        });
+
+        let bandName = findBandName(data.bands, highestPayingGig);
+
+        let html = `
             <tr>
                 <td>${ year.year }</td>
                 <td>${ year.data.totalGigs }</td>
@@ -125,6 +136,13 @@ function createYearTable(years) {
                 <td>${ year.data.cities.length }</td>
                 <td>${ year.data.states.length }</td>
                 <td>${ year.data.totalPay }</td>
+                <td>
+                    <span>${ highestPayingGig.date }</span>
+                    <span>${ highestPayingGig.venue }</span>
+                    <span>${ highestPayingGig.city }, ${ highestPayingGig.state }</span>
+                    <span>${ bandName }</span>
+                    <span>$${ highestPayingGig.pay }</span>
+                </td>
             </tr>
         `;
 
@@ -217,7 +235,6 @@ function handleRadioButtonChange(e) {
     const year = e.currentTarget.value;
     data.selectedYear = year;
     renderData(findDataByYear());
-    yearSpan.innerText = year;
 }
 
 function handleModalButtonClick(e) {
@@ -258,7 +275,6 @@ window.addEventListener('load', async function() {
     await loadData();
     renderData(findDataByYear());
     createYearTable(data.years);
-    yearSpan.innerText = data.selectedYear;
 });
 
 window.addEventListener('keydown', e => {
