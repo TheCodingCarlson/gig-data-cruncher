@@ -4,9 +4,11 @@ const gigTableBody = document.querySelector('.gig-table-body');
 const bandTableBody = document.querySelector('.band-table-body');
 const dataTableBody = document.querySelector('.data-table-body');
 const bandGigsTableBody = document.querySelector('.band-gigs-table-body');
+const yearTableBody = document.querySelector('.year-table-body');
 
 const radioButtons = document.querySelectorAll('input[type="radio"]');
 const years = Array.from(radioButtons).map(radio => radio.value);
+const yearSpan = document.querySelector('.year');
 
 const modalInner = document.querySelector('.modal-inner');
 const modalOuter = document.querySelector('.modal-outer');
@@ -35,10 +37,6 @@ class GigYear {
     }
 };
 
-function findDataByYear() {
-    return yearData = data.years.find(year => year.year === data.selectedYear);
-}
-
 function generateGigRow(gig, bandName = '') {
     let html = `
         <tr>
@@ -64,7 +62,7 @@ function createGigTable(yearData) {
 
 function createBandTable(bandData) {
     bandData.map((band, index) => {
-        let bandHtml = `
+        let html = `
             <tr>
                 <td>${ band.name }</td>
                 <td>${ band.gigCount }</td>
@@ -74,12 +72,12 @@ function createBandTable(bandData) {
             </tr>
         `;
 
-        bandTableBody.insertAdjacentHTML('beforeend', bandHtml);
+        bandTableBody.insertAdjacentHTML('beforeend', html);
     });
 }
 
 function createDataTable(data) {
-    const dataHtml = `
+    const html = `
         <tr>
             <td>Total # of Gigs</td>
             <td>${ data.gigData.length }</td>
@@ -114,7 +112,28 @@ function createDataTable(data) {
         </tr>
     `;
     
-    dataTableBody.insertAdjacentHTML('beforeend', dataHtml);
+    dataTableBody.insertAdjacentHTML('beforeend', html);
+}
+
+function createYearTable(years) {
+    years.forEach(year => {
+        const html = `
+            <tr>
+                <td>${ year.year }</td>
+                <td>${ year.data.totalGigs }</td>
+                <td>${ year.data.bands.length }</td>
+                <td>${ year.data.cities.length }</td>
+                <td>${ year.data.states.length }</td>
+                <td>${ year.data.totalPay }</td>
+            </tr>
+        `;
+
+        yearTableBody.insertAdjacentHTML('beforebegin', html);
+    });
+}
+
+function findDataByYear() {
+    return yearData = data.years.find(year => year.year === data.selectedYear);
 }
 
 async function fetchData() {
@@ -198,6 +217,7 @@ function handleRadioButtonChange(e) {
     const year = e.currentTarget.value;
     data.selectedYear = year;
     renderData(findDataByYear());
+    yearSpan.innerText = year;
 }
 
 function handleModalButtonClick(e) {
@@ -237,6 +257,8 @@ modalOuter.addEventListener('click', function(e) {
 window.addEventListener('load', async function() {
     await loadData();
     renderData(findDataByYear());
+    createYearTable(data.years);
+    yearSpan.innerText = data.selectedYear;
 });
 
 window.addEventListener('keydown', e => {
