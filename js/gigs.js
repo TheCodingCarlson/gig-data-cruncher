@@ -120,12 +120,11 @@ function createYearTable(years) {
             return (prevGig.pay >= currentGigPay) ? prevGig : currentGig;
         });
 
+        let mostPopularBand = year.data.bandData.reduce((prevBand, currentBand) => {
+            return (prevBand.gigs.length > currentBand.gigs.length) ? prevBand : currentBand;
+        });
+
         let bandName = findBandName(data.bands, highestPayingGig);
-        let mostPopularBand = year.data.bandData.reduce((prevBand, currentBand) => (prevBand.gigs.length > currentBand.gigs.length) ? prevBand : currentBand);
-
-        
-
-        console.log(mostPopularBand);
         let html = `
             <tr>
                 <td>${ year.year }</td>
