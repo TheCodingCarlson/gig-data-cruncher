@@ -24,6 +24,10 @@
         "name": "Chebon Tiger"
     },
     {
+        "code": "DK",
+        "name": "Daniel Kirkpatrick and the Bayonets"
+    },
+    {
         "code": "DJ",
         "name": "Darin Jones and the Last Men Standing"
     },
@@ -72,6 +76,10 @@
         "name": "Nichol Eskridge"
     },
     {
+        "code": "NO",
+        "name": "Nate Omdal"
+    },
+    {
         "code": "PK",
         "name": "Pavel Kulick"
     },
@@ -84,6 +92,10 @@
         "name": "Stay Grounded"
     },
     {
+        "code": "SGB",
+        "name": "Susan Gailbreth"
+    },
+    {
         "code": "SM",
         "name": "Sweetkiss Momma"
     },
@@ -94,6 +106,10 @@
     {
         "code": "SO",
         "name": "SideOne"
+    },
+    {
+        "code": "TK",
+        "name": "Tim Kennedy"
     },
     {
         "code": "TL",
