@@ -22,6 +22,7 @@
 .modal-inner {
     max-width: 900px;
     min-width: 400px;
+    max-height: 85vh;
     padding: 2rem;
     position: relative;
     border: 2px solid var(--blue);
@@ -29,6 +30,7 @@
     background: var(--dark-tan);
     transform: translateY(-200%);
     transition: transform 1s;
+    overflow-y: auto;
 }
 
 .modal-close-button {

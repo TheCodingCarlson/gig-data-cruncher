@@ -25,7 +25,6 @@ class GigYear {
     constructor() {
         this.gigData = [];
         this.bandData = [];
-        this.bands = [];
         this.cities = [];
         this.states = [];
         this.totalPay = 0;
@@ -35,6 +34,14 @@ class GigYear {
         this.averagePayPerGig = 0;
     }
 };
+
+function createGigTable(yearData) {
+    yearData.gigData.map(gig => {
+        let bandName = findBandName(data.bands, gig);
+        let html = generateGigRow(gig, bandName);
+        gigTableBody.insertAdjacentHTML('beforeend', html);
+    });
+}
 
 function generateGigRow(gig, bandName = '') {
     let html = `
@@ -49,19 +56,6 @@ function generateGigRow(gig, bandName = '') {
     `;
 
     return html;
-}
-
-function findBandName(bands, gig) {
-    const bandName = bands.find(band => band.code === gig.bandCode).name;
-    return bandName;
-}
-
-function createGigTable(yearData) {
-    yearData.gigData.map(gig => {
-        let bandName = findBandName(data.bands, gig);
-        let html = generateGigRow(gig, bandName);
-        gigTableBody.insertAdjacentHTML('beforeend', html);
-    });
 }
 
 function createBandTable(bandData) {
@@ -96,7 +90,7 @@ function createDataTable(data) {
         </tr>
         <tr>
             <td>Total # of Bands</td>
-            <td>${ data.bands.length }</td>
+            <td>${ data.bandData.length }</td>
         </tr>
         <tr>
             <td>Total # of Cities</td>
@@ -127,15 +121,20 @@ function createYearTable(years) {
         });
 
         let bandName = findBandName(data.bands, highestPayingGig);
+        let mostPopularBand = year.data.bandData.reduce((prevBand, currentBand) => (prevBand.gigs.length > currentBand.gigs.length) ? prevBand : currentBand);
 
+        
+
+        console.log(mostPopularBand);
         let html = `
             <tr>
                 <td>${ year.year }</td>
                 <td>${ year.data.totalGigs }</td>
-                <td>${ year.data.bands.length }</td>
+                <td>${ year.data.bandData.length }</td>
                 <td>${ year.data.cities.length }</td>
                 <td>${ year.data.states.length }</td>
                 <td>${ year.data.totalPay }</td>
+                <td>${ mostPopularBand.name }</td>
                 <td>
                     <span>${ highestPayingGig.date }</span>
                     <span>${ highestPayingGig.venue }</span>
@@ -150,8 +149,14 @@ function createYearTable(years) {
     });
 }
 
-function findDataByYear() {
-    return yearData = data.years.find(year => year.year === data.selectedYear);
+function findBandName(bands, gig) {
+    const bandName = bands.find(band => band.code === gig.bandCode).name;
+    return bandName;
+}
+
+function findDataByYear(years, selectedYear) {
+    const yearData = years.find(year => year.year === selectedYear);
+    return yearData;
 }
 
 async function fetchData() {
@@ -181,8 +186,12 @@ function populateYearData(gigData, bandData) {
     const gigYearObj = new GigYear();
 
     gigYearObj.gigData = gigData;
-    gigYearObj.bands = [ ...new Set(gigData.map(gig => gig.bandCode)) ];
-    gigYearObj.cities = [ ...new Set(gigData.map(gig => gig.city)) ];
+    gigData.map(gig => {
+        if (gig.city !== 'NA' && gigYearObj.cities.indexOf(gig.city) === -1) {
+            gigYearObj.cities.push(gig.city);
+           
+        }
+    });
     gigYearObj.states = [ ...new Set(gigData.map(gig => gig.state)) ];
 
     gigYearObj.totalGigs = gigData.length;
@@ -234,7 +243,7 @@ async function renderData(data) {
 function handleRadioButtonChange(e) {
     const year = e.currentTarget.value;
     data.selectedYear = year;
-    renderData(findDataByYear());
+    renderData(findDataByYear(data.years, data.selectedYear));
 }
 
 function handleModalButtonClick(e) {
@@ -273,7 +282,7 @@ modalOuter.addEventListener('click', function(e) {
 
 window.addEventListener('load', async function() {
     await loadData();
-    renderData(findDataByYear());
+    renderData(findDataByYear(data.years, data.selectedYear));
     createYearTable(data.years);
 });
 

@@ -92,13 +92,18 @@ td span {
 /* Radios */
 
 .radio-button-list {
+    display: flex;
     list-style-type: none;
     padding-left: 0;
     margin: 0;
 }
 
-.radio-button {
-    padding-bottom: 6px;
+.radio-button:not(:first-of-type) {
+    margin-left: 24px;
+}
+
+.radio-button > input[type="radio"]:checked + label {
+    color: var(--tan);
 }
 
 /* Helper Divs */
