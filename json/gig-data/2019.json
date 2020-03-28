@@ -40,6 +40,14 @@
         "pay": 200
     },
     {
+        "date": "02-23-2019",
+        "venue": "The Anchor",
+        "city": "Everett",
+        "state": "WA",
+        "bandCode": "LT",
+        "pay": 100
+    },
+    {
         "date": "02-26-2019",
         "venue": "SPU",
         "city": "Seattle",
@@ -449,13 +457,5 @@
         "city": "Marysville",
         "state": "WA",
         "bandCode": "DJ"
-    },
-    {
-        "date": "12-31-2019",
-        "venue": "Wildhorse Resort & Casino",
-        "city": "Pendleton",
-        "state": "OR",
-        "bandCode": "TM",
-        "pay": 700
     }
 ]

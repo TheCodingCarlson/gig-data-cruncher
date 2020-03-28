@@ -59,6 +59,7 @@ button {
 
 table {
     border-collapse: collapse;
+    width: 100%;
 }
   
 td, th {
@@ -67,8 +68,8 @@ td, th {
 }
 
 td span {
-    font-size: 1.5rem;
-    display: block;
+    font-size: 1.75rem;
+    display: inline-block;
 }
 
 /* Card */
@@ -109,7 +110,7 @@ td span {
 /* Helper Divs */
 
 .wrapper {
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 4rem auto;
     padding: 2rem;
     background: var(--dark-tan);
